@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  my-postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: lel-db
+      POSTGRES_USER: lel
+      POSTGRES_PASSWORD: password
+    ports:
+      - "54321:5432"
+    volumes:
+      - my-volume:/var/lib/postgresql/data
+volumes:
+  my-volume:
